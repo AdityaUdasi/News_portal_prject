@@ -1,0 +1,63 @@
+<!-- API key : 521e5fa55904450a9390c7121674bc00 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>News App</title>
+  </head>
+
+  <body>
+    <!-- navigation bar -->
+    <nav>
+      <div class="main-nav container flex">
+        <a href="#" onclick="reload()" class="company-logo">
+          <img src="logo.png" alt="company logo" />
+        </a>
+
+        <div class="nav-links">
+          <ul class="flex">
+            <li class="hover-links nav-item" id="sports" onclick="onNavItemClick('Sports')">Sports</li>
+            <li class="hover-links nav-item" id="finance" onclick="onNavItemClick('Finance')">Finance</li>
+            <li class="hover-links nav-item" id="politics" onclick="onNavItemClick('Politics')">Politics</li>
+            <li class="hover-links nav-item" id="technology" onclick="onNavItemClick('Technology')">Technology</li>
+          </ul>
+        </div>
+
+        <div class="search-bar flex">
+          <input type="text" class="news-input" id="search-text" placeholder="e.g. Science" />
+          <button class="search-button" id="search-button">Search</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- news template -->
+    <main>
+        <section class="cards-container container flex" id="card-container">
+
+        </section>
+
+
+      <template id="news-card-template">
+        <article class="card">
+          <figure class="card-header">
+            <img src="https://via.placeholder.com/400x200" alt="news-image"  id="news-img">
+          </figure>
+          <article class="card-content">
+            <h3 id="news-title">Title</h3>
+            <h6 class="news-source" id="news-src">End Gadget 26/08/2023</h6>
+            <p class="news-desc" id="news-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, in
+              amet eaque id doloremque neque saepe porro impedit, velit sit quia
+              at, nulla error deserunt adipisci molestias et aperiam ipsum!
+            </p>
+          </article>
+        </article>
+      </template>
+    </main>
+
+    <!-- including script file -->
+    <script src="script.js"></script>
+  </body>
+</html>

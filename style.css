@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* css reset */
+*{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variables */
+:root{
+    --PRIMARY-TEXT-COLOR :#183b56;
+    --SECONDARY-TEXT-COLOR:#577592;
+    --ACCENT-COLOR:#2294ed;
+    --ACCENT-COLOR-DARK:#1d69a3;
+}
+
+/* General styling */
+
+body{
+    font-family: "Poppins" , sans-serif;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+
+p{
+    font-family: "Roboto" , sans-serif;
+    color: var(--SECONDARY-TEXT-COLOR);
+    line-height: 1.4rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* utility class's */
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    width: 90vw;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+
+
+/* Nav bar ================================================== */
+
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav{
+    justify-content: space-between;
+    padding-block: 4px;
+}
+
+/* Logo */
+.company-logo img{
+    width: 80px;
+}
+
+/* nav bar links and properties*/
+.nav-links ul{
+    gap: 4vw;
+}
+.hover-links{
+    cursor: pointer;
+}
+.hover-links:hover{
+    color: var(--SECONDARY-TEXT-COLOR);
+    text-decoration: underline;
+}
+.hover-links:active{
+    color: red;
+}
+
+.nav-item.active{
+    color: var(--ACCENT-COLOR);
+}
+
+/* search bar & button */
+.search-bar{
+    height: 32px;
+    gap: 8px;
+}
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto" , sans-serif;
+}
+
+.search-button{
+    background-color: var(--ACCENT-COLOR);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-family: "Roboto" , sans-serif;
+}
+
+.search-button:hover{
+    background-color: var(--ACCENT-COLOR-DARK);
+}
+
+/* Navigation bar completed */
+
+/* main section =================================================== */
+
+main{
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container{
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: start;
+}
+
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-source{
+    margin-block: 12px;
+}
